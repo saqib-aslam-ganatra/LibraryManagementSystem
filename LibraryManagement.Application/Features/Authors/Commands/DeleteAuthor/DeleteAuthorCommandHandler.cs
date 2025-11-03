@@ -1,7 +1,7 @@
 ﻿using LibraryManagement.Application.Common.Interfaces;
 using MediatR;
 
-namespace LibraryManagement.Application.Features.Author.Commands.DeleteAuthor
+namespace LibraryManagement.Application.Features.Authors.Commands.DeleteAuthor
 {
     public class DeleteAuthorCommandHandler : IRequestHandler<DeleteAuthorCommand, bool>
     {

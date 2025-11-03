@@ -12,7 +12,7 @@ namespace LibraryManagement.Application.Common.Interfaces
         Task<IEnumerable<MemberDto>> GetAllAsync();
         Task<MemberDto?> GetByIdAsync(int id);
         Task<MemberDto> CreateAsync(MemberDto dto);
-        Task<MemberDto> UpdateAsync(MemberDto dto);
+        Task<bool> UpdateAsync(MemberDto dto);
         Task<bool> DeleteAsync(int id);
     }
 }

@@ -1,7 +1,10 @@
 ﻿using LibraryManagement.Infrastructure.Identity;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using LibraryManagement.Api.Models.Auth;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace LibraryManagement.Api.Controllers
 {
@@ -19,13 +22,19 @@ namespace LibraryManagement.Api.Controllers
             JwtTokenService jwtService)
         {
             _userManager = userManager;
-            //_signInManager = signInManager;
+            _signInManager = signInManager;
             _jwtService = jwtService;
         }
 
+        [AllowAnonymous]
         [HttpPost("register")]
-        public async Task<IActionResult> Register(RegisterRequest model)
+        public async Task<IActionResult> Register([FromBody] RegisterRequest model)
         {
+            if (!ModelState.IsValid)
+            {
+                return ValidationProblem(ModelState);
+            }
+
             var user = new ApplicationUser
             {
                 UserName = model.UserName,
@@ -42,19 +51,31 @@ namespace LibraryManagement.Api.Controllers
             return Ok(new { Message = "User registered successfully" });
         }
 
+        [AllowAnonymous]
         [HttpPost("login")]
-        public async Task<IActionResult> Login(LoginRequest model)
+        public async Task<IActionResult> Login([FromBody] LoginRequest model)
         {
+            if (!ModelState.IsValid)
+            {
+                return ValidationProblem(ModelState);
+            }
+
             var user = await _userManager.FindByEmailAsync(model.Email);
-            if (user == null) return Unauthorized("Invalid credentials");
+            if (user == null)
+            {
+                return Unauthorized(new { Message = "Invalid credentials" });
+            }
 
             var result = await _signInManager.CheckPasswordSignInAsync(user, model.Password, false);
-            if (!result.Succeeded) return Unauthorized("Invalid credentials");
+            if (!result.Succeeded)
+            {
+                return Unauthorized(new { Message = "Invalid credentials" });
+            }
 
             var roles = await _userManager.GetRolesAsync(user);
-            var token = _jwtService.GenerateToken(user.Id, user.UserName, user.Email!, roles);
+            var token = _jwtService.GenerateToken(user.Id, user.UserName!, user.Email!, roles);
 
-            
+
             return Ok(new AuthResponse { Token = token });
         }
     }

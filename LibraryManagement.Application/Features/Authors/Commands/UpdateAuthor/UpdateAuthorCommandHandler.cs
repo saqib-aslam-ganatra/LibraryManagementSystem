@@ -1,7 +1,7 @@
 ﻿using LibraryManagement.Application.Common.Interfaces;
 using MediatR;
 
-namespace LibraryManagement.Application.Features.Author.Commands.UpdateAuthor
+namespace LibraryManagement.Application.Features.Authors.Commands.UpdateAuthor
 {
     public class UpdateAuthorCommandHandler : IRequestHandler<UpdateAuthorCommand, bool>
     {
@@ -18,7 +18,7 @@ namespace LibraryManagement.Application.Features.Author.Commands.UpdateAuthor
             if (author is null)
                 return false;
 
-            author.Name = request.Name ?? author.Name;
+            author.Name = string.IsNullOrWhiteSpace(request.Name) ? author.Name : request.Name;
             author.Biography = request.Biography;
 
             await _repository.UpdateAsync(author);

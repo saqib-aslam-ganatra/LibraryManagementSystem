@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using LibraryManagement.Application.Common.Interfaces;
-using LibraryManagement.Application.Features.Author.DTOs;
+using LibraryManagement.Application.Features.Authors.DTOs;
 using LibraryManagement.Domain.Entities;
 using MediatR;
 
-namespace LibraryManagement.Application.Features.Author.Commands.CreateAuthor
+namespace LibraryManagement.Application.Features.Authors.Commands.CreateAuthor
 {
     public class CreateAuthorCommandHandler : IRequestHandler<CreateAuthorCommand, AuthorDto>
     {

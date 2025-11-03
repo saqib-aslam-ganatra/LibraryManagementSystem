@@ -1,43 +1,50 @@
-﻿using LibraryManagement.Domain.Entities;
+﻿using LibraryManagement.Application.Common.Interfaces;
+using LibraryManagement.Domain.Entities;
 using LibraryManagement.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
-public class MemberRepository : IMemberRepository
+namespace LibraryManagement.Infrastructure.Repositories
 {
-    private readonly ApplicationDbContext _context;
-
-    public MemberRepository(ApplicationDbContext context)
+    public class MemberRepository : IMemberRepository
     {
-        _context = context;
-    }
+        private readonly ApplicationDbContext _context;
 
-    public async Task<IEnumerable<Member>> GetAllAsync()
-        => await _context.Members.AsNoTracking().ToListAsync();
+        public MemberRepository(ApplicationDbContext context)
+        {
+            _context = context;
+        }
 
-    public async Task<Member?> GetByIdAsync(int id)
-        => await _context.Members.FindAsync(id);
+        public async Task<IEnumerable<Member>> GetAllAsync()
+            => await _context.Members.AsNoTracking().ToListAsync();
 
-    public async Task<Member> AddAsync(Member entity)
-    {
-        _context.Members.Add(entity);
-        await _context.SaveChangesAsync();
-        return entity; //  return created entity
-    }
+        public async Task<Member?> GetByIdAsync(int id)
+            => await _context.Members.FindAsync(id);
 
-    public async Task<Member> UpdateAsync(Member entity)
-    {
-        _context.Members.Update(entity);
-        await _context.SaveChangesAsync();
-        return entity; //return updated entity
-    }
+        public async Task<Member> AddAsync(Member entity)
+        {
+            _context.Members.Add(entity);
+            await _context.SaveChangesAsync();
+            return entity;
+        }
 
-    public async Task<bool> DeleteAsync(int id)
-    {
-        var entity = await _context.Members.FindAsync(id);
-        if (entity == null) return false;
+        public async Task<Member> UpdateAsync(Member entity)
+        {
+            _context.Members.Update(entity);
+            await _context.SaveChangesAsync();
+            return entity;
+        }
 
-        _context.Members.Remove(entity);
-        await _context.SaveChangesAsync();
-        return true; // return success
+        public async Task<bool> DeleteAsync(int id)
+        {
+            var entity = await _context.Members.FindAsync(id);
+            if (entity == null)
+            {
+                return false;
+            }
+
+            _context.Members.Remove(entity);
+            await _context.SaveChangesAsync();
+            return true;
+        }
     }
 }

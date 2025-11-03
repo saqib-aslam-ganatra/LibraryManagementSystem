@@ -1,9 +1,12 @@
 
+using LibraryManagement.Application;
 using LibraryManagement.Infrastructure;
 using LibraryManagement.Infrastructure.Data;
 using LibraryManagement.Infrastructure.Identity;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
+using System;
 using System.Text;
 
 namespace LibraryManagement.Api
@@ -21,6 +24,7 @@ namespace LibraryManagement.Api
             // Add Infrastructure Register Infrastructure (includes DbContext, Identity, Repositories, etc.)
             builder.Services.AddInfrastructure(builder.Configuration);
 
+            // Identity configuration
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
             {
                 options.Password.RequireDigit = true;
@@ -32,6 +36,10 @@ namespace LibraryManagement.Api
             .AddEntityFrameworkStores<ApplicationDbContext>()
             .AddDefaultTokenProviders();
 
+            // JWT signing key
+            var jwtKey = configuration["Jwt:Key"] ?? throw new InvalidOperationException("Jwt:Key missing");
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey));
+
             // Add Authentication and Authorization (important for JWT)
             builder.Services.AddAuthentication(options =>
             {
@@ -39,7 +47,7 @@ namespace LibraryManagement.Api
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             }).AddJwtBearer(options =>
             {
-                options.RequireHttpsMetadata = true;
+                options.RequireHttpsMetadata = false;
                 options.SaveToken = true;
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
@@ -55,10 +63,6 @@ namespace LibraryManagement.Api
             });
 
             builder.Services.AddAuthorization();
-
-            // JWT auth
-            var jwtKey = configuration["Jwt:Key"] ?? throw new InvalidOperationException("Jwt:Key missing");
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey));
 
             // Add Controllers (API endpoints)
             builder.Services.AddControllers();
@@ -86,8 +90,7 @@ namespace LibraryManagement.Api
 
             app.UseHttpsRedirection();
             app.UseCors("Angular");
-            app.UseAuthorization();
-
+            app.UseAuthentication();
             app.UseAuthorization();
             app.MapControllers();
 

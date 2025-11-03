@@ -34,7 +34,7 @@ namespace LibraryManagement.Infrastructure
             services.AddScoped<IAuthorService, AuthorService>();
             services.AddScoped<IMemberService, MemberService>();
             services.AddScoped<ILoanService, LoanService>();
-            services.AddScoped<IBookRepository, BookRepository>();
+            services.AddScoped<IBookService, BookService>();
 
             // Utility Services needed by ApplicationDbContext
             services.AddScoped<DateTimeService>();

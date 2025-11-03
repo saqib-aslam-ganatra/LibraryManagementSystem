@@ -2,10 +2,12 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
 using LibraryManagement.Application.Common.Interfaces;
+using LibraryManagement.Infrastructure.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace LibraryManagement.Infrastructure.Data
 {
-    public class ApplicationDbContext : DbContext, IApplicationDbContext
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IApplicationDbContext
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
 
@@ -17,7 +19,6 @@ namespace LibraryManagement.Infrastructure.Data
             _httpContextAccessor = httpContextAccessor;
         }
 
-        //Use automatic property expressions (no interface duplication)
         public DbSet<Book> Books { get; set; } = null!;
         public DbSet<Author> Authors { get; set; } = null!;
         public DbSet<Member> Members { get; set; } = null!;
@@ -25,16 +26,19 @@ namespace LibraryManagement.Infrastructure.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Apply all configurations automatically
+            base.OnModelCreating(modelBuilder); //required for Identity!
+
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
 
-            // Global filters for soft delete
             modelBuilder.Entity<Book>().HasQueryFilter(b => !b.IsDeleted);
             modelBuilder.Entity<Author>().HasQueryFilter(a => !a.IsDeleted);
             modelBuilder.Entity<Member>().HasQueryFilter(m => !m.IsDeleted);
             modelBuilder.Entity<Loan>().HasQueryFilter(l => !l.IsDeleted);
 
-            base.OnModelCreating(modelBuilder);
+            // ✅ Fix decimal warning
+            modelBuilder.Entity<Book>()
+                .Property(b => b.ReplacementCost)
+                .HasPrecision(18, 2);
         }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
@@ -42,8 +46,8 @@ namespace LibraryManagement.Infrastructure.Data
             var currentUser = _httpContextAccessor.HttpContext?.User?.Identity?.Name ?? "System";
 
             var entries = ChangeTracker.Entries()
-                .Where(e => e.Entity is Domain.Common.BaseEntity &&
-                            (e.State == EntityState.Added || e.State == EntityState.Modified));
+                .Where(e => e.Entity is Domain.Common.BaseEntity
+                         && (e.State == EntityState.Added || e.State == EntityState.Modified));
 
             foreach (var entityEntry in entries)
             {

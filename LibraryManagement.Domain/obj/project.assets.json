@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Domain\\LibraryManagement.Domain.csproj",
+      "projectUniqueName": "E:\\Projects\\LibraryManagementSystem\\LibraryManagement.Domain\\LibraryManagement.Domain.csproj",
       "projectName": "LibraryManagement.Domain",
-      "projectPath": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Domain\\LibraryManagement.Domain.csproj",
+      "projectPath": "E:\\Projects\\LibraryManagementSystem\\LibraryManagement.Domain\\LibraryManagement.Domain.csproj",
       "packagesPath": "C:\\Users\\SAQIB\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Domain\\obj\\",
+      "outputPath": "E:\\Projects\\LibraryManagementSystem\\LibraryManagement.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

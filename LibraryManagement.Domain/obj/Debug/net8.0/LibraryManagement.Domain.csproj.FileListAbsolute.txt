@@ -9,3 +9,15 @@ C:\Users\SAQIB\source\repos\LibraryManagementSystem\LibraryManagement.Domain\obj
 C:\Users\SAQIB\source\repos\LibraryManagementSystem\LibraryManagement.Domain\obj\Debug\net8.0\refint\LibraryManagement.Domain.dll
 C:\Users\SAQIB\source\repos\LibraryManagementSystem\LibraryManagement.Domain\obj\Debug\net8.0\LibraryManagement.Domain.pdb
 C:\Users\SAQIB\source\repos\LibraryManagementSystem\LibraryManagement.Domain\obj\Debug\net8.0\ref\LibraryManagement.Domain.dll
+E:\Projects\LibraryManagementSystem\LibraryManagement.Domain\bin\Debug\net8.0\LibraryManagement.Domain.deps.json
+E:\Projects\LibraryManagementSystem\LibraryManagement.Domain\bin\Debug\net8.0\LibraryManagement.Domain.dll
+E:\Projects\LibraryManagementSystem\LibraryManagement.Domain\bin\Debug\net8.0\LibraryManagement.Domain.pdb
+E:\Projects\LibraryManagementSystem\LibraryManagement.Domain\obj\Debug\net8.0\LibraryManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\LibraryManagementSystem\LibraryManagement.Domain\obj\Debug\net8.0\LibraryManagement.Domain.AssemblyInfoInputs.cache
+E:\Projects\LibraryManagementSystem\LibraryManagement.Domain\obj\Debug\net8.0\LibraryManagement.Domain.AssemblyInfo.cs
+E:\Projects\LibraryManagementSystem\LibraryManagement.Domain\obj\Debug\net8.0\LibraryManagement.Domain.csproj.CoreCompileInputs.cache
+E:\Projects\LibraryManagementSystem\LibraryManagement.Domain\obj\Debug\net8.0\LibraryManagement.Domain.sourcelink.json
+E:\Projects\LibraryManagementSystem\LibraryManagement.Domain\obj\Debug\net8.0\LibraryManagement.Domain.dll
+E:\Projects\LibraryManagementSystem\LibraryManagement.Domain\obj\Debug\net8.0\refint\LibraryManagement.Domain.dll
+E:\Projects\LibraryManagementSystem\LibraryManagement.Domain\obj\Debug\net8.0\LibraryManagement.Domain.pdb
+E:\Projects\LibraryManagementSystem\LibraryManagement.Domain\obj\Debug\net8.0\ref\LibraryManagement.Domain.dll

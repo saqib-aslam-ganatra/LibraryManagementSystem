@@ -1,0 +1,17 @@
+.vs/LibraryManagementSystem/FileContentIndex/20f7f74d-094b-4f5c-8d5d-9f054c297fe0.vsidx
+.vs/LibraryManagementSystem/FileContentIndex/233cabe7-08e3-4eaf-80e7-3c86ca332dae.vsidx
+.vs/LibraryManagementSystem/FileContentIndex/2a09f7dd-5d95-42b1-958f-474a65a3fe45.vsidx
+.vs/LibraryManagementSystem/FileContentIndex/68f7f49b-24c8-4301-8b93-fc8d14e633ef.vsidx
+.vs/LibraryManagementSystem/FileContentIndex/8aa6df2e-4559-409a-a6ba-2e14e766decc.vsidx
+LibraryManagement.Api/bin/Debug/net8.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+LibraryManagement.Api/bin/Debug/net8.0/FluentValidation.DependencyInjectionExtensions.dll
+LibraryManagement.Api/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+LibraryManagement.Api/obj/Debug/net8.0/LibraryManagement.Api.sourcelink.json
+LibraryManagement.Application/obj/Debug/net8.0/LibraryManagement.Application.sourcelink.json
+LibraryManagement.Domain/obj/Debug/net8.0/LibraryManagement.Domain.sourcelink.json
+LibraryManagement.Infrastructure/obj/Debug/net8.0/LibraryManagement.Infrastructure.sourcelink.json
+*.vsidx
+*.cs
+*.cache
+*.editorconfig
+*.json

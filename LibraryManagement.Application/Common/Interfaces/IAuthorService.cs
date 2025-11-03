@@ -1,4 +1,4 @@
-﻿using LibraryManagement.Application.Features.Author.DTOs;
+﻿using LibraryManagement.Application.Features.Authors.DTOs;
 
 namespace LibraryManagement.Application.Common.Interfaces
 {

@@ -1,6 +1,9 @@
 ﻿using LibraryManagement.Application.Common.Interfaces;
-using LibraryManagement.Application.Features.Author.DTOs;
+using LibraryManagement.Application.Features.Authors.DTOs;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace LibraryManagement.Api.Controllers
 {
@@ -16,39 +19,69 @@ namespace LibraryManagement.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        [AllowAnonymous]
+        public async Task<ActionResult<IEnumerable<AuthorDto>>> GetAll()
         {
             var authors = await _authorService.GetAllAuthorsAsync();
             return Ok(authors);
         }
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        [HttpGet("{id:int}")]
+        [AllowAnonymous]
+        public async Task<ActionResult<AuthorDto>> GetById(int id)
         {
             var author = await _authorService.GetAuthorByIdAsync(id);
-            if (author == null) return NotFound();
+            if (author == null)
+            {
+                return NotFound();
+            }
+
             return Ok(author);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] AuthorDto dto)
+        public async Task<ActionResult<AuthorDto>> Create([FromBody] AuthorDto dto)
         {
+            if (!ModelState.IsValid)
+            {
+                return ValidationProblem(ModelState);
+            }
+
             var created = await _authorService.CreateAuthorAsync(dto);
             return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("{id:int}")]
         public async Task<IActionResult> Update(int id, [FromBody] AuthorDto dto)
         {
-            if (id != dto.Id) return BadRequest("ID mismatch");
-            await _authorService.UpdateAuthorAsync(dto);
+            if (!ModelState.IsValid)
+            {
+                return ValidationProblem(ModelState);
+            }
+
+            if (id != dto.Id)
+            {
+                return BadRequest(new { Message = "Route id and payload id do not match." });
+            }
+
+            var updated = await _authorService.UpdateAuthorAsync(dto);
+            if (!updated)
+            {
+                return NotFound();
+            }
+
             return NoContent();
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("{id:int}")]
         public async Task<IActionResult> Delete(int id)
         {
-            await _authorService.DeleteAuthorAsync(id);
+            var deleted = await _authorService.DeleteAuthorAsync(id);
+            if (!deleted)
+            {
+                return NotFound();
+            }
+
             return NoContent();
         }
     }

@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace LibraryManagement.Application.Features.Author.Commands.UpdateAuthor
+namespace LibraryManagement.Application.Features.Authors.Commands.UpdateAuthor
 {
     public class UpdateAuthorCommand : IRequest<bool>
     {

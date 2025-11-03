@@ -1,9 +1,12 @@
 ﻿using LibraryManagement.Domain.Entities;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace LibraryManagement.Application.Common.Interfaces
 {
     public interface IBookRepository : IGenericRepository<Book>
     {
-        // You can add custom book-specific methods here later if needed
+        Task<IEnumerable<Book>> GetAllWithAuthorsAsync();
+        Task<Book?> GetByIdWithAuthorAsync(int id);
     }
 }

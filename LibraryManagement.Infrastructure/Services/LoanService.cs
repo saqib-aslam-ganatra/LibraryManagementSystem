@@ -25,7 +25,7 @@ namespace LibraryManagement.Infrastructure.Services
         public async Task<LoanDto?> GetByIdAsync(int id)
         {
             var loan = await _repository.GetByIdAsync(id);
-            return _mapper.Map<LoanDto>(loan);
+            return loan is null ? null : _mapper.Map<LoanDto>(loan);
         }
 
         public async Task<LoanDto> CreateAsync(LoanDto dto)
@@ -35,11 +35,22 @@ namespace LibraryManagement.Infrastructure.Services
             return _mapper.Map<LoanDto>(created);
         }
 
-        public async Task<LoanDto> UpdateAsync(LoanDto dto)
+        public async Task<bool> UpdateAsync(LoanDto dto)
         {
-            var entity = _mapper.Map<Loan>(dto);
-            var updated = await _repository.UpdateAsync(entity);
-            return _mapper.Map<LoanDto>(updated);
+            var entity = await _repository.GetByIdAsync(dto.Id);
+            if (entity is null)
+            {
+                return false;
+            }
+
+            entity.BookId = dto.BookId;
+            entity.MemberId = dto.MemberId;
+            entity.DueDate = dto.DueDate;
+            entity.ReturnDate = dto.ReturnDate;
+            entity.Status = dto.Status;
+
+            await _repository.UpdateAsync(entity);
+            return true;
         }
 
         public async Task<bool> DeleteAsync(int id)

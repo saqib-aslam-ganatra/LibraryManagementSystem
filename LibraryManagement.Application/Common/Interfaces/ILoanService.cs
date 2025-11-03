@@ -7,7 +7,7 @@ namespace LibraryManagement.Application.Common.Interfaces
         Task<IEnumerable<LoanDto>> GetAllAsync();
         Task<LoanDto?> GetByIdAsync(int id);
         Task<LoanDto> CreateAsync(LoanDto dto);
-        Task<LoanDto> UpdateAsync(LoanDto dto);
+        Task<bool> UpdateAsync(LoanDto dto);
         Task<bool> DeleteAsync(int id);
     }
 }

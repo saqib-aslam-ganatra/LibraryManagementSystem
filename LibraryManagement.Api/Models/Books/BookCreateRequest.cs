@@ -1,11 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace LibraryManagement.Application.Features.Books.DTOs
+namespace LibraryManagement.Api.Models.Books
 {
-    public class BookDto
+    public class BookCreateRequest
     {
-        public int Id { get; set; }
-
         [Required]
         [StringLength(200)]
         public string Title { get; set; } = string.Empty;
@@ -16,8 +14,6 @@ namespace LibraryManagement.Application.Features.Books.DTOs
 
         [Required]
         public int AuthorId { get; set; }
-
-        public string? AuthorName { get; set; }
 
         [StringLength(1000)]
         public string? Description { get; set; }
@@ -31,6 +27,6 @@ namespace LibraryManagement.Application.Features.Books.DTOs
         [Range(0, double.MaxValue)]
         public decimal ReplacementCost { get; set; }
 
-        public bool IsAvailable { get; set; }
+        public bool IsAvailable { get; set; } = true;
     }
 }

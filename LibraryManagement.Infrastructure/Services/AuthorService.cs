@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using LibraryManagement.Application.Common.Interfaces;
-using LibraryManagement.Application.Features.Author.DTOs;
+using LibraryManagement.Application.Features.Authors.DTOs;
 using LibraryManagement.Domain.Entities;
 
 namespace LibraryManagement.Infrastructure.Services
@@ -25,12 +25,16 @@ namespace LibraryManagement.Infrastructure.Services
         public async Task<AuthorDto?> GetAuthorByIdAsync(int id)
         {
             var author = await _repository.GetByIdAsync(id);
-            return _mapper.Map<AuthorDto?>(author);
+            return author is null ? null : _mapper.Map<AuthorDto>(author);
         }
 
         public async Task<AuthorDto> CreateAuthorAsync(AuthorDto authorDto)
         {
-            var entity = _mapper.Map<Author>(authorDto);
+            var entity = new Author
+            {
+                Name = authorDto.Name.Trim(),
+                Biography = authorDto.Biography
+            };
             var created = await _repository.AddAsync(entity);
             return _mapper.Map<AuthorDto>(created);
         }
@@ -41,7 +45,8 @@ namespace LibraryManagement.Infrastructure.Services
             if (author is null)
                 return false;
 
-            _mapper.Map(authorDto, author);
+            author.Name = authorDto.Name.Trim();
+            author.Biography = authorDto.Biography;
             await _repository.UpdateAsync(author);
             return true;
         }

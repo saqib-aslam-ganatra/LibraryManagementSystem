@@ -1,6 +1,6 @@
-﻿using LibraryManagement.Application.Features.Author.DTOs;
+﻿using LibraryManagement.Application.Features.Authors.DTOs;
 using MediatR;
-namespace LibraryManagement.Application.Features.Author.Queries.GetAuthorById
+namespace LibraryManagement.Application.Features.Authors.Queries.GetAuthorById
 {
     public class GetAuthorByIdQuery : IRequest<AuthorDto?>
     {

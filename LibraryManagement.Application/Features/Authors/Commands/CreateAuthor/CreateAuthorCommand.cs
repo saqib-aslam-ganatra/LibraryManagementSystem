@@ -1,7 +1,7 @@
-﻿using LibraryManagement.Application.Features.Author.DTOs;
+﻿using LibraryManagement.Application.Features.Authors.DTOs;
 using MediatR;
 
-namespace LibraryManagement.Application.Features.Author.Commands.CreateAuthor
+namespace LibraryManagement.Application.Features.Authors.Commands.CreateAuthor
 {
     public class CreateAuthorCommand : IRequest<AuthorDto>
     {

@@ -1,12 +1,9 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace LibraryManagement.Application.Features.Members.DTOs
+namespace LibraryManagement.Api.Models.Members
 {
-    public class MemberDto
+    public class MemberCreateRequest
     {
-        public int Id { get; set; }
-
         [Required]
         [StringLength(200)]
         public string FullName { get; set; } = string.Empty;
@@ -20,9 +17,5 @@ namespace LibraryManagement.Application.Features.Members.DTOs
 
         [StringLength(400)]
         public string? Address { get; set; }
-
-        public DateTime MembershipDate { get; set; }
-
-        public DateTime JoinedDate { get; set; }
     }
 }

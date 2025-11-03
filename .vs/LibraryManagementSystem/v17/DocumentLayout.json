@@ -1,0 +1,292 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{590B37D8-D54D-4E6C-ADA6-6BAD8F59C9D7}|LibraryManagement.Api\\LibraryManagement.Api.csproj|c:\\users\\saqib\\source\\repos\\librarymanagementsystem\\librarymanagement.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{590B37D8-D54D-4E6C-ADA6-6BAD8F59C9D7}|LibraryManagement.Api\\LibraryManagement.Api.csproj|solutionrelative:librarymanagement.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E9AFA9A-2992-46AB-9314-977D51F276D0}|LibraryManagement.Infrastructure\\LibraryManagement.Infrastructure.csproj|c:\\users\\saqib\\source\\repos\\librarymanagementsystem\\librarymanagement.infrastructure\\identity\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E9AFA9A-2992-46AB-9314-977D51F276D0}|LibraryManagement.Infrastructure\\LibraryManagement.Infrastructure.csproj|solutionrelative:librarymanagement.infrastructure\\identity\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E9AFA9A-2992-46AB-9314-977D51F276D0}|LibraryManagement.Infrastructure\\LibraryManagement.Infrastructure.csproj|c:\\users\\saqib\\source\\repos\\librarymanagementsystem\\librarymanagement.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E9AFA9A-2992-46AB-9314-977D51F276D0}|LibraryManagement.Infrastructure\\LibraryManagement.Infrastructure.csproj|solutionrelative:librarymanagement.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E9AFA9A-2992-46AB-9314-977D51F276D0}|LibraryManagement.Infrastructure\\LibraryManagement.Infrastructure.csproj|c:\\users\\saqib\\source\\repos\\librarymanagementsystem\\librarymanagement.infrastructure\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E9AFA9A-2992-46AB-9314-977D51F276D0}|LibraryManagement.Infrastructure\\LibraryManagement.Infrastructure.csproj|solutionrelative:librarymanagement.infrastructure\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1902A1F6-0CB5-4DEF-88EF-504E6E5A8A54}|LibraryManagement.Application\\LibraryManagement.Application.csproj|c:\\users\\saqib\\source\\repos\\librarymanagementsystem\\librarymanagement.application\\features\\authors\\commands\\createauthor\\createauthorcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1902A1F6-0CB5-4DEF-88EF-504E6E5A8A54}|LibraryManagement.Application\\LibraryManagement.Application.csproj|solutionrelative:librarymanagement.application\\features\\authors\\commands\\createauthor\\createauthorcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{590B37D8-D54D-4E6C-ADA6-6BAD8F59C9D7}|LibraryManagement.Api\\LibraryManagement.Api.csproj|c:\\users\\saqib\\source\\repos\\librarymanagementsystem\\librarymanagement.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{590B37D8-D54D-4E6C-ADA6-6BAD8F59C9D7}|LibraryManagement.Api\\LibraryManagement.Api.csproj|solutionrelative:librarymanagement.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E9AFA9A-2992-46AB-9314-977D51F276D0}|LibraryManagement.Infrastructure\\LibraryManagement.Infrastructure.csproj|c:\\users\\saqib\\source\\repos\\librarymanagementsystem\\librarymanagement.infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E9AFA9A-2992-46AB-9314-977D51F276D0}|LibraryManagement.Infrastructure\\LibraryManagement.Infrastructure.csproj|solutionrelative:librarymanagement.infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1902A1F6-0CB5-4DEF-88EF-504E6E5A8A54}|LibraryManagement.Application\\LibraryManagement.Application.csproj|c:\\users\\saqib\\source\\repos\\librarymanagementsystem\\librarymanagement.application\\common\\interfaces\\iapplicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1902A1F6-0CB5-4DEF-88EF-504E6E5A8A54}|LibraryManagement.Application\\LibraryManagement.Application.csproj|solutionrelative:librarymanagement.application\\common\\interfaces\\iapplicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E9AFA9A-2992-46AB-9314-977D51F276D0}|LibraryManagement.Infrastructure\\LibraryManagement.Infrastructure.csproj|c:\\users\\saqib\\source\\repos\\librarymanagementsystem\\librarymanagement.infrastructure\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E9AFA9A-2992-46AB-9314-977D51F276D0}|LibraryManagement.Infrastructure\\LibraryManagement.Infrastructure.csproj|solutionrelative:librarymanagement.infrastructure\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1902A1F6-0CB5-4DEF-88EF-504E6E5A8A54}|LibraryManagement.Application\\LibraryManagement.Application.csproj|c:\\users\\saqib\\source\\repos\\librarymanagementsystem\\librarymanagement.application\\common\\interfaces\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1902A1F6-0CB5-4DEF-88EF-504E6E5A8A54}|LibraryManagement.Application\\LibraryManagement.Application.csproj|solutionrelative:librarymanagement.application\\common\\interfaces\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E9AFA9A-2992-46AB-9314-977D51F276D0}|LibraryManagement.Infrastructure\\LibraryManagement.Infrastructure.csproj|c:\\users\\saqib\\source\\repos\\librarymanagementsystem\\librarymanagement.infrastructure\\repositories\\authorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E9AFA9A-2992-46AB-9314-977D51F276D0}|LibraryManagement.Infrastructure\\LibraryManagement.Infrastructure.csproj|solutionrelative:librarymanagement.infrastructure\\repositories\\authorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E9AFA9A-2992-46AB-9314-977D51F276D0}|LibraryManagement.Infrastructure\\LibraryManagement.Infrastructure.csproj|c:\\users\\saqib\\source\\repos\\librarymanagementsystem\\librarymanagement.infrastructure\\repositories\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E9AFA9A-2992-46AB-9314-977D51F276D0}|LibraryManagement.Infrastructure\\LibraryManagement.Infrastructure.csproj|solutionrelative:librarymanagement.infrastructure\\repositories\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E9AFA9A-2992-46AB-9314-977D51F276D0}|LibraryManagement.Infrastructure\\LibraryManagement.Infrastructure.csproj|c:\\users\\saqib\\source\\repos\\librarymanagementsystem\\librarymanagement.infrastructure\\repositories\\memberrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E9AFA9A-2992-46AB-9314-977D51F276D0}|LibraryManagement.Infrastructure\\LibraryManagement.Infrastructure.csproj|solutionrelative:librarymanagement.infrastructure\\repositories\\memberrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1902A1F6-0CB5-4DEF-88EF-504E6E5A8A54}|LibraryManagement.Application\\LibraryManagement.Application.csproj|c:\\users\\saqib\\source\\repos\\librarymanagementsystem\\librarymanagement.application\\common\\interfaces\\imemberrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1902A1F6-0CB5-4DEF-88EF-504E6E5A8A54}|LibraryManagement.Application\\LibraryManagement.Application.csproj|solutionrelative:librarymanagement.application\\common\\interfaces\\imemberrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E9AFA9A-2992-46AB-9314-977D51F276D0}|LibraryManagement.Infrastructure\\LibraryManagement.Infrastructure.csproj|c:\\users\\saqib\\source\\repos\\librarymanagementsystem\\librarymanagement.infrastructure\\services\\memberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E9AFA9A-2992-46AB-9314-977D51F276D0}|LibraryManagement.Infrastructure\\LibraryManagement.Infrastructure.csproj|solutionrelative:librarymanagement.infrastructure\\services\\memberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Api\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "LibraryManagement.Api\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Api\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "LibraryManagement.Api\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAA7wD0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T02:20:12.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Infrastructure\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "LibraryManagement.Infrastructure\\DependencyInjection.cs",
+              "ToolTip": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Infrastructure\\DependencyInjection.cs",
+              "RelativeToolTip": "LibraryManagement.Infrastructure\\DependencyInjection.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T02:19:32.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CreateAuthorCommandValidator.cs",
+              "DocumentMoniker": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Application\\Features\\Authors\\Commands\\CreateAuthor\\CreateAuthorCommandValidator.cs",
+              "RelativeDocumentMoniker": "LibraryManagement.Application\\Features\\Authors\\Commands\\CreateAuthor\\CreateAuthorCommandValidator.cs",
+              "ToolTip": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Application\\Features\\Authors\\Commands\\CreateAuthor\\CreateAuthorCommandValidator.cs",
+              "RelativeToolTip": "LibraryManagement.Application\\Features\\Authors\\Commands\\CreateAuthor\\CreateAuthorCommandValidator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T02:17:44.47Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "JwtTokenService.cs",
+              "DocumentMoniker": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Infrastructure\\Identity\\JwtTokenService.cs",
+              "RelativeDocumentMoniker": "LibraryManagement.Infrastructure\\Identity\\JwtTokenService.cs",
+              "ToolTip": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Infrastructure\\Identity\\JwtTokenService.cs",
+              "RelativeToolTip": "LibraryManagement.Infrastructure\\Identity\\JwtTokenService.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAIwBcAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T02:13:36.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Api\\Program.cs",
+              "RelativeDocumentMoniker": "LibraryManagement.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Api\\Program.cs",
+              "RelativeToolTip": "LibraryManagement.Api\\Program.cs",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAswGEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T02:09:26.749Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ServiceRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Infrastructure\\ServiceRegistration.cs",
+              "RelativeDocumentMoniker": "LibraryManagement.Infrastructure\\ServiceRegistration.cs",
+              "ToolTip": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Infrastructure\\ServiceRegistration.cs",
+              "RelativeToolTip": "LibraryManagement.Infrastructure\\ServiceRegistration.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAgwCkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T02:07:14.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Infrastructure\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "LibraryManagement.Infrastructure\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Infrastructure\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "LibraryManagement.Infrastructure\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAADUAAAAAAAAAAAAuwBcAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T02:05:26.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Application\\Common\\Interfaces\\IApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "LibraryManagement.Application\\Common\\Interfaces\\IApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Application\\Common\\Interfaces\\IApplicationDbContext.cs",
+              "RelativeToolTip": "LibraryManagement.Application\\Common\\Interfaces\\IApplicationDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T02:05:22.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Infrastructure\\Repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "LibraryManagement.Infrastructure\\Repositories\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Infrastructure\\Repositories\\GenericRepository.cs",
+              "RelativeToolTip": "LibraryManagement.Infrastructure\\Repositories\\GenericRepository.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAwwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T02:03:50.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Application\\Common\\Interfaces\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "LibraryManagement.Application\\Common\\Interfaces\\IGenericRepository.cs",
+              "ToolTip": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Application\\Common\\Interfaces\\IGenericRepository.cs",
+              "RelativeToolTip": "LibraryManagement.Application\\Common\\Interfaces\\IGenericRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T02:02:49.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BookRepository.cs",
+              "DocumentMoniker": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Infrastructure\\Repositories\\BookRepository.cs",
+              "RelativeDocumentMoniker": "LibraryManagement.Infrastructure\\Repositories\\BookRepository.cs",
+              "ToolTip": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Infrastructure\\Repositories\\BookRepository.cs",
+              "RelativeToolTip": "LibraryManagement.Infrastructure\\Repositories\\BookRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T01:57:32.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AuthorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Infrastructure\\Repositories\\AuthorRepository.cs",
+              "RelativeDocumentMoniker": "LibraryManagement.Infrastructure\\Repositories\\AuthorRepository.cs",
+              "ToolTip": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Infrastructure\\Repositories\\AuthorRepository.cs",
+              "RelativeToolTip": "LibraryManagement.Infrastructure\\Repositories\\AuthorRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T01:57:26.087Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MemberRepository.cs",
+              "DocumentMoniker": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Infrastructure\\Repositories\\MemberRepository.cs",
+              "RelativeDocumentMoniker": "LibraryManagement.Infrastructure\\Repositories\\MemberRepository.cs",
+              "ToolTip": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Infrastructure\\Repositories\\MemberRepository.cs",
+              "RelativeToolTip": "LibraryManagement.Infrastructure\\Repositories\\MemberRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T01:56:05.13Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IMemberRepository.cs",
+              "DocumentMoniker": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Application\\Common\\Interfaces\\IMemberRepository.cs",
+              "RelativeDocumentMoniker": "LibraryManagement.Application\\Common\\Interfaces\\IMemberRepository.cs",
+              "ToolTip": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Application\\Common\\Interfaces\\IMemberRepository.cs",
+              "RelativeToolTip": "LibraryManagement.Application\\Common\\Interfaces\\IMemberRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T01:55:36.212Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MemberService.cs",
+              "DocumentMoniker": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Infrastructure\\Services\\MemberService.cs",
+              "RelativeDocumentMoniker": "LibraryManagement.Infrastructure\\Services\\MemberService.cs",
+              "ToolTip": "C:\\Users\\SAQIB\\source\\repos\\LibraryManagementSystem\\LibraryManagement.Infrastructure\\Services\\MemberService.cs",
+              "RelativeToolTip": "LibraryManagement.Infrastructure\\Services\\MemberService.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAnwCgAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T01:54:47.111Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

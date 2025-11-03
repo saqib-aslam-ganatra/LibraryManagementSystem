@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34928.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LibraryManagementSystem", "LibraryManagementSystem", "{692BB13C-1986-40AF-BADE-1E2F5B23721D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LibraryManagement.Domain", "LibraryManagement.Domain", "{0826ACC2-BD9E-4DAB-AF16-1E238899411D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LibraryManagement.Application", "LibraryManagement.Application", "{9DB0433C-03A8-4A7B-96CE-4B10AEB7E0AE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LibraryManagement.Infrastructure", "LibraryManagement.Infrastructure", "{FDCD1A5D-913B-415B-BE89-8A1C74A4E42B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LibraryManagement.Api", "LibraryManagement.Api", "{783D649C-E89A-48AC-9504-EE679C574104}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryManagement.Domain", "LibraryManagement.Domain\LibraryManagement.Domain.csproj", "{5AFBC4B5-8DB5-48EA-9D25-0D754F86BBEE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryManagement.Application", "LibraryManagement.Application\LibraryManagement.Application.csproj", "{1902A1F6-0CB5-4DEF-88EF-504E6E5A8A54}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5AFBC4B5-8DB5-48EA-9D25-0D754F86BBEE} = {5AFBC4B5-8DB5-48EA-9D25-0D754F86BBEE}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryManagement.Infrastructure", "LibraryManagement.Infrastructure\LibraryManagement.Infrastructure.csproj", "{1E9AFA9A-2992-46AB-9314-977D51F276D0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1902A1F6-0CB5-4DEF-88EF-504E6E5A8A54} = {1902A1F6-0CB5-4DEF-88EF-504E6E5A8A54}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryManagement.Api", "LibraryManagement.Api\LibraryManagement.Api.csproj", "{590B37D8-D54D-4E6C-ADA6-6BAD8F59C9D7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1902A1F6-0CB5-4DEF-88EF-504E6E5A8A54} = {1902A1F6-0CB5-4DEF-88EF-504E6E5A8A54}
+		{1E9AFA9A-2992-46AB-9314-977D51F276D0} = {1E9AFA9A-2992-46AB-9314-977D51F276D0}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5AFBC4B5-8DB5-48EA-9D25-0D754F86BBEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AFBC4B5-8DB5-48EA-9D25-0D754F86BBEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AFBC4B5-8DB5-48EA-9D25-0D754F86BBEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AFBC4B5-8DB5-48EA-9D25-0D754F86BBEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1902A1F6-0CB5-4DEF-88EF-504E6E5A8A54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1902A1F6-0CB5-4DEF-88EF-504E6E5A8A54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1902A1F6-0CB5-4DEF-88EF-504E6E5A8A54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1902A1F6-0CB5-4DEF-88EF-504E6E5A8A54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E9AFA9A-2992-46AB-9314-977D51F276D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E9AFA9A-2992-46AB-9314-977D51F276D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E9AFA9A-2992-46AB-9314-977D51F276D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E9AFA9A-2992-46AB-9314-977D51F276D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{590B37D8-D54D-4E6C-ADA6-6BAD8F59C9D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{590B37D8-D54D-4E6C-ADA6-6BAD8F59C9D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{590B37D8-D54D-4E6C-ADA6-6BAD8F59C9D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{590B37D8-D54D-4E6C-ADA6-6BAD8F59C9D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0826ACC2-BD9E-4DAB-AF16-1E238899411D} = {692BB13C-1986-40AF-BADE-1E2F5B23721D}
+		{9DB0433C-03A8-4A7B-96CE-4B10AEB7E0AE} = {692BB13C-1986-40AF-BADE-1E2F5B23721D}
+		{FDCD1A5D-913B-415B-BE89-8A1C74A4E42B} = {692BB13C-1986-40AF-BADE-1E2F5B23721D}
+		{783D649C-E89A-48AC-9504-EE679C574104} = {692BB13C-1986-40AF-BADE-1E2F5B23721D}
+		{5AFBC4B5-8DB5-48EA-9D25-0D754F86BBEE} = {0826ACC2-BD9E-4DAB-AF16-1E238899411D}
+		{1902A1F6-0CB5-4DEF-88EF-504E6E5A8A54} = {9DB0433C-03A8-4A7B-96CE-4B10AEB7E0AE}
+		{1E9AFA9A-2992-46AB-9314-977D51F276D0} = {FDCD1A5D-913B-415B-BE89-8A1C74A4E42B}
+		{590B37D8-D54D-4E6C-ADA6-6BAD8F59C9D7} = {783D649C-E89A-48AC-9504-EE679C574104}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C504299A-06A2-4389-8269-9722B84DAE91}
+	EndGlobalSection
+EndGlobal

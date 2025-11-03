@@ -1,11 +1,12 @@
-﻿using LibraryManagement.Application.Common.Interfaces;
+using LibraryManagement.Application.Common.Interfaces;
+using LibraryManagement.Domain.Common;
 using LibraryManagement.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
 namespace LibraryManagement.Infrastructure.Repositories
 {
-    public class GenericRepository<T> : IGenericRepository<T> where T : class
+    public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
     {
         private readonly ApplicationDbContext _context;
         private readonly DbSet<T> _dbSet;
@@ -16,14 +17,14 @@ namespace LibraryManagement.Infrastructure.Repositories
             _dbSet = _context.Set<T>();
         }
 
-        public async Task<IEnumerable<T>> GetAllAsync()
+        public virtual async Task<IEnumerable<T>> GetAllAsync()
         {
             return await _dbSet.AsNoTracking().ToListAsync();
         }
 
-        public async Task<T?> GetByIdAsync(int id)
+        public virtual async Task<T?> GetByIdAsync(int id)
         {
-            return await _dbSet.FindAsync(id);
+            return await _dbSet.AsQueryable().FirstOrDefaultAsync(entity => entity.Id == id);
         }
 
         public async Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> predicate)
@@ -47,11 +48,19 @@ namespace LibraryManagement.Infrastructure.Repositories
 
         public async Task<bool> DeleteAsync(int id)
         {
-            var entity = await _dbSet.FindAsync(id);
+            var entity = await _dbSet.FirstOrDefaultAsync(e => e.Id == id);
             if (entity == null)
+            {
                 return false;
+            }
 
-            _dbSet.Remove(entity);
+            if (entity.IsDeleted)
+            {
+                return false;
+            }
+
+            entity.IsDeleted = true;
+            _context.Entry(entity).State = EntityState.Modified;
             await _context.SaveChangesAsync();
             return true;
         }

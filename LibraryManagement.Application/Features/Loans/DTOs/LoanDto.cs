@@ -12,9 +12,13 @@ namespace LibraryManagement.Application.Features.Loans.DTOs
         [Range(1, int.MaxValue)]
         public int BookId { get; set; }
 
+        public string? BookTitle { get; set; }
+
         [Required]
         [Range(1, int.MaxValue)]
         public int MemberId { get; set; }
+
+        public string? MemberName { get; set; }
 
         public DateTime BorrowedAt { get; set; }
 

@@ -1,0 +1,104 @@
+<div class="loans">
+  <mat-card class="form-card">
+    <mat-card-title>{{ editingId ? 'Edit Loan' : 'Create Loan' }}</mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="form" (ngSubmit)="save()" class="form-grid">
+        <mat-form-field appearance="outline">
+          <mat-label>Book</mat-label>
+          <mat-select formControlName="bookId">
+            <mat-option [value]="0" disabled>Select a book</mat-option>
+            <mat-option *ngFor="let book of books$ | async" [value]="book.id">
+              {{ book.title }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Member</mat-label>
+          <mat-select formControlName="memberId">
+            <mat-option [value]="0" disabled>Select a member</mat-option>
+            <mat-option *ngFor="let member of members$ | async" [value]="member.id">
+              {{ member.fullName }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Loan Date</mat-label>
+          <input matInput type="date" formControlName="loanDate">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Due Date</mat-label>
+          <input matInput type="date" formControlName="dueDate">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Return Date</mat-label>
+          <input matInput type="date" formControlName="returnDate">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Status</mat-label>
+          <mat-select formControlName="status">
+            <mat-option *ngFor="let status of statusOptions" [value]="status">
+              {{ LoanStatus[status] }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <div class="form-actions full-span">
+          <button mat-flat-button color="primary" type="submit">{{ editingId ? 'Update' : 'Create' }}</button>
+          <button mat-button type="button" (click)="reset()">Reset</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-title>Loans</mat-card-title>
+    <mat-card-content>
+      <table mat-table [dataSource]="loans$ | async" class="mat-elevation-z1">
+        <ng-container matColumnDef="book">
+          <th mat-header-cell *matHeaderCellDef>Book</th>
+          <td mat-cell *matCellDef="let loan">{{ loan.bookTitle }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="member">
+          <th mat-header-cell *matHeaderCellDef>Member</th>
+          <td mat-cell *matCellDef="let loan">{{ loan.memberName }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="loanDate">
+          <th mat-header-cell *matHeaderCellDef>Loan Date</th>
+          <td mat-cell *matCellDef="let loan">{{ loan.loanDate | date }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="dueDate">
+          <th mat-header-cell *matHeaderCellDef>Due Date</th>
+          <td mat-cell *matCellDef="let loan">{{ loan.dueDate | date }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef>Status</th>
+          <td mat-cell *matCellDef="let loan">{{ LoanStatus[loan.status] }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let loan">
+            <button mat-icon-button color="primary" (click)="edit(loan)">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button color="warn" (click)="delete(loan)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+    </mat-card-content>
+  </mat-card>
+</div>

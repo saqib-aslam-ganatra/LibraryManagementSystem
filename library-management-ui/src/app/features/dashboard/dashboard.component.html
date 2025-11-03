@@ -1,0 +1,75 @@
+<div *ngIf="summary$ | async as summary" class="dashboard">
+  <div class="stats-grid">
+    <mat-card class="stat-card" *ngFor="let stat of [
+      { label: 'Total Books', value: summary.totalBooks, icon: 'menu_book' },
+      { label: 'Available Books', value: summary.availableBooks, icon: 'library_add_check' },
+      { label: 'Members', value: summary.totalMembers, icon: 'people' },
+      { label: 'Authors', value: summary.totalAuthors, icon: 'person' },
+      { label: 'Active Loans', value: summary.activeLoans, icon: 'assignment' },
+      { label: 'Overdue Loans', value: summary.overdueLoans, icon: 'error_outline' }
+    ]">
+      <mat-card-header>
+        <mat-icon>{{ stat.icon }}</mat-icon>
+        <mat-card-title>{{ stat.label }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="stat-value">{{ stat.value }}</div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="reports">
+    <mat-card>
+      <mat-card-title>Download Reports</mat-card-title>
+      <mat-card-content>
+        <div class="report-buttons">
+          <ng-container *ngFor="let entity of ['books', 'members', 'authors', 'loans']">
+            <div class="report-group">
+              <span class="report-label">{{ entity | titlecase }}</span>
+              <div class="button-group">
+                <button mat-stroked-button (click)="download(entity, 'csv')">CSV</button>
+                <button mat-stroked-button (click)="download(entity, 'xlsx')">XLSX</button>
+                <button mat-stroked-button (click)="download(entity, 'pdf')">PDF</button>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <mat-card class="recent-loans">
+    <mat-card-title>Recent Loans</mat-card-title>
+    <mat-card-content>
+      <table mat-table [dataSource]="summary.recentLoans" class="mat-elevation-z1">
+        <ng-container matColumnDef="bookTitle">
+          <th mat-header-cell *matHeaderCellDef>Book</th>
+          <td mat-cell *matCellDef="let loan">{{ loan.bookTitle }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="memberName">
+          <th mat-header-cell *matHeaderCellDef>Member</th>
+          <td mat-cell *matCellDef="let loan">{{ loan.memberName }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="loanDate">
+          <th mat-header-cell *matHeaderCellDef>Loan Date</th>
+          <td mat-cell *matCellDef="let loan">{{ loan.loanDate | date }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="dueDate">
+          <th mat-header-cell *matHeaderCellDef>Due Date</th>
+          <td mat-cell *matCellDef="let loan">{{ loan.dueDate | date }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef>Status</th>
+          <td mat-cell *matCellDef="let loan">{{ LoanStatus[loan.status] }}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+    </mat-card-content>
+  </mat-card>
+</div>

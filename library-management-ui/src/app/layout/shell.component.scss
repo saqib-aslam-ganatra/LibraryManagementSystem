@@ -1,0 +1,56 @@
+.shell-container {
+  height: 100vh;
+}
+
+.shell-sidenav {
+  width: 220px;
+  background: #263238;
+  color: #fff;
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    letter-spacing: 0.08em;
+  }
+
+  a.mat-mdc-list-item {
+    color: rgba(255, 255, 255, 0.85);
+
+    &.active {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+  }
+}
+
+.shell-toolbar {
+  display: flex;
+  align-items: center;
+
+  .toolbar-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  .flex-spacer {
+    flex: 1;
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: 1rem;
+  }
+}
+
+.shell-content {
+  padding: 1.5rem;
+  min-height: calc(100vh - 64px);
+  background: #f5f7fb;
+}
+
+.menu-button {
+  margin-right: 1rem;
+}

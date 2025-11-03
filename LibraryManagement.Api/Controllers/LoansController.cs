@@ -82,6 +82,7 @@ namespace LibraryManagement.Api.Controllers
                 Id = request.Id,
                 BookId = request.BookId,
                 MemberId = request.MemberId,
+                LoanDate = request.LoanDate,
                 DueDate = request.DueDate,
                 ReturnDate = request.ReturnDate,
                 Status = request.Status

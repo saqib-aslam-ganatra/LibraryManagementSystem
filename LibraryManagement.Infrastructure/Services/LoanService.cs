@@ -32,7 +32,8 @@ namespace LibraryManagement.Infrastructure.Services
         {
             var entity = _mapper.Map<Loan>(dto);
             var created = await _repository.AddAsync(entity);
-            return _mapper.Map<LoanDto>(created);
+            var withIncludes = await _repository.GetByIdAsync(created.Id);
+            return _mapper.Map<LoanDto>(withIncludes ?? created);
         }
 
         public async Task<bool> UpdateAsync(LoanDto dto)
@@ -45,11 +46,13 @@ namespace LibraryManagement.Infrastructure.Services
 
             entity.BookId = dto.BookId;
             entity.MemberId = dto.MemberId;
+            entity.LoanDate = dto.LoanDate;
             entity.DueDate = dto.DueDate;
             entity.ReturnDate = dto.ReturnDate;
             entity.Status = dto.Status;
 
             await _repository.UpdateAsync(entity);
+
             return true;
         }
 

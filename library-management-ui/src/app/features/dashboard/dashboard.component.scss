@@ -1,0 +1,59 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.stat-card {
+  mat-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    mat-icon {
+      font-size: 32px;
+      height: 32px;
+      width: 32px;
+    }
+  }
+
+  .stat-value {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
+
+.reports {
+  mat-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .report-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .report-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 160px;
+  }
+
+  .button-group {
+    display: flex;
+    gap: 0.5rem;
+  }
+}
+
+.recent-loans table {
+  width: 100%;
+}

@@ -32,7 +32,12 @@ namespace LibraryManagement.Application.Mappings
             CreateMap<Member, MemberDto>().ReverseMap();
 
             // Loan mappings
-            CreateMap<Loan, LoanDto>().ReverseMap();
+            CreateMap<Loan, LoanDto>()
+                .ForMember(dest => dest.BookTitle, opt => opt.MapFrom(src => src.Book != null ? src.Book.Title : null))
+                .ForMember(dest => dest.MemberName, opt => opt.MapFrom(src => src.Member != null ? src.Member.FullName : null))
+                .ReverseMap()
+                .ForMember(dest => dest.Book, opt => opt.Ignore())
+                .ForMember(dest => dest.Member, opt => opt.Ignore());
 
             
 

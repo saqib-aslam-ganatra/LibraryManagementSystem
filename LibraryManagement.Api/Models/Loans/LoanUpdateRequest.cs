@@ -18,6 +18,9 @@ namespace LibraryManagement.Api.Models.Loans
         [Range(1, int.MaxValue)]
         public int MemberId { get; set; }
 
+        [Required]
+        public DateTime LoanDate { get; set; }
+
         public DateTime? DueDate { get; set; }
 
         public DateTime? ReturnDate { get; set; }

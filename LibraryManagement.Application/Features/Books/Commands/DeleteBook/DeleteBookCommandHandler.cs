@@ -1,4 +1,4 @@
-﻿using LibraryManagement.Application.Common.Interfaces;
+using LibraryManagement.Application.Common.Interfaces;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,9 +17,16 @@ namespace LibraryManagement.Application.Features.Books.Commands.DeleteBook
         {
             var book = await _context.Books.FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken);
             if (book == null)
+            {
                 return false;
+            }
 
-            _context.Books.Remove(book);
+            if (book.IsDeleted)
+            {
+                return false;
+            }
+
+            book.IsDeleted = true;
             await _context.SaveChangesAsync(cancellationToken);
             return true;
         }

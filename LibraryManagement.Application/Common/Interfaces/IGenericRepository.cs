@@ -1,8 +1,9 @@
-﻿using System.Linq.Expressions;
+using LibraryManagement.Domain.Common;
+using System.Linq.Expressions;
 
 namespace LibraryManagement.Application.Common.Interfaces
 {
-    public interface IGenericRepository<T> where T : class
+    public interface IGenericRepository<T> where T : BaseEntity
     {
         Task<IEnumerable<T>> GetAllAsync();
         Task<T?> GetByIdAsync(int id);

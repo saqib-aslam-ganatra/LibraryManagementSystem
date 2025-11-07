@@ -5,10 +5,4 @@ export interface LoginRequest {
 
 export interface LoginResponse {
   token: string;
-  expiresIn: number;
-  user: {
-    id: number;
-    fullName: string;
-    email: string;
-  };
 }

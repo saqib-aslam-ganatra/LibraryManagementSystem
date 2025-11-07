@@ -6,6 +6,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { HttpErrorResponse } from '@angular/common/http';
 import { AuthService } from '../../../core/services/auth.service';
 import { firstValueFrom } from 'rxjs';
 
@@ -21,7 +22,7 @@ import { firstValueFrom } from 'rxjs';
     MatIconModule
   ],
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss]'
 })
 export class LoginComponent {
   private readonly fb = inject(FormBuilder);
@@ -34,18 +35,42 @@ export class LoginComponent {
   });
 
   isSubmitting = false;
+  errorMessage: string | null = null;
 
   async submit(): Promise<void> {
     if (this.form.invalid || this.isSubmitting) {
+      this.form.markAllAsTouched();
       return;
     }
 
     this.isSubmitting = true;
+    this.errorMessage = null;
+
     try {
       await firstValueFrom(this.authService.login(this.form.getRawValue()));
       await this.router.navigate(['/dashboard']);
+    } catch (error) {
+      this.errorMessage = this.resolveErrorMessage(error);
     } finally {
       this.isSubmitting = false;
     }
+  }
+
+  private resolveErrorMessage(error: unknown): string {
+    if (error instanceof HttpErrorResponse) {
+      if (error.status === 401) {
+        return 'Invalid email or password.';
+      }
+
+      const message =
+        (typeof error.error === 'string' && error.error) ||
+        (typeof error.error?.message === 'string' && error.error.message);
+
+      if (message) {
+        return message;
+      }
+    }
+
+    return 'Unable to sign in. Please try again later.';
   }
 }

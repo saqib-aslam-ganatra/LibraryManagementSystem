@@ -21,7 +21,7 @@
       <span class="flex-spacer"></span>
       <div class="user-info" *ngIf="user$ | async as user">
         <mat-icon>account_circle</mat-icon>
-        <span>{{ user?.fullName || 'User' }}</span>
+        <span>{{ user?.displayName || 'User' }}</span>
       </div>
       <button mat-flat-button color="accent" (click)="signOut()">Logout</button>
     </mat-toolbar>

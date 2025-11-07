@@ -20,9 +20,11 @@
           <mat-error *ngIf="form.controls.password.hasError('minlength')">Minimum 6 characters</mat-error>
         </mat-form-field>
 
+        <div class="error-message" *ngIf="errorMessage">{{ errorMessage }}</div>
+
         <button mat-flat-button color="primary" class="full-width" [disabled]="form.invalid || isSubmitting">
           <mat-icon>login</mat-icon>
-          <span>Login</span>
+          <span>{{ isSubmitting ? 'Signing In...' : 'Login' }}</span>
         </button>
       </form>
     </mat-card-content>
